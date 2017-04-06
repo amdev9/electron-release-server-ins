@@ -1,0 +1,33 @@
+.modal-header
+  h3.modal-title Add a New Uploader
+.modal-body
+  form.form-horizontal(novalidate='')
+    fieldset
+      // Uploader Id
+      .form-group
+        label.col-md-4.control-label(for='id') Uploader Id
+        .col-md-7
+          input.form-control.input-md(
+            ng-model='uploader.id',
+            minlength='1',
+            maxlength='12',
+            required
+            )
+           
+      // Select Approve Status
+      .form-group
+        label.col-md-4.control-label(for='approved') Approve Status
+        .col-md-7
+          select.form-control(
+            ng-model='uploader.approved',
+            name='approved',
+            ng-options='o as o for o in DataUploaderService.availableStatuses',
+            required
+            )
+          hr
+          span.help-block You will not be able to change the above later.
+       
+.modal-footer
+  div
+    button.btn.btn-warning(type='button', ng-click='addUploader()') Add Uploader
+    button.btn.btn-danger(type='button', ng-click='closeModal()') Cancel

@@ -1,0 +1,38 @@
+{
+  "name": "electron-release-server",
+  "description": "A version server for hosting and serving the your electron desktop app releases.",
+  "main": "app.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.5.9",
+    "angular-confirm-modal": "~1.2.6",
+    "angular-bootstrap": "~1.3.3",
+    "angular-messages": "~1.5.9",
+    "angular-jwt": "~0.1.8",
+    "angular-moment": "~1.0.1",
+    "angular-PubSub": "angular.pubsub#*",
+    "angular-route": "~1.5.9",
+    "angular-sanitize": "~1.5.9",
+    "angular-sails": "~1.1.4",
+    "angular-ui-notification": "~0.2.0",
+    "angular-xeditable": "~0.5.0",
+    "bootstrap-sass-official": "^3.3.7",
+    "compare-versions": "~3.0.0",
+    "components-font-awesome": "~4.7.0",
+    "lodash": "~4.17.2",
+    "ng-device-detector": "~3.0.1",
+    "ng-file-upload": "~12.2.13",
+    "ngstorage": "~0.3.11"
+  }
+}

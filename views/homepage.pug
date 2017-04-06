@@ -1,0 +1,150 @@
+doctype html
+html
+  head
+
+
+    meta(charset='utf-8')
+    title InstaFilter PRO - программа для продвижения в Instagram
+
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet")
+    
+    meta(name='description', content='Download the interactive app for doing whatever it does.')
+    meta(name='author', content='ASoft')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    base(href="/")
+
+    style(type='text/css').
+      
+
+
+      @media(min-width: 992px) {
+        iframe {
+          margin-top: 50px;
+        }
+        //- .headof p {
+        //-   width: 400px;  
+        //- }
+        .headof h1 {
+          font-family: 'Open Sans', sans-serif;
+          text-align: left;
+          font-weight: 300;
+          font-size: 90px; 
+        }
+      }     
+
+      @media (max-width: 992px) {
+        .headof h1 {
+          font-family: 'Open Sans', sans-serif;
+          text-align: left;
+          font-weight: 300;
+          font-size: 70px; 
+        }
+
+        .headof p {
+          width: 100%;
+        }
+      }
+
+      
+    // bower:css
+    link(rel='stylesheet', href='/bower_components/angular-ui-notification/dist/angular-ui-notification.css')
+    link(rel='stylesheet', href='/bower_components/components-font-awesome/css/font-awesome.css')
+    // endbower
+
+    // STYLES
+    link(rel="stylesheet", href="/min/production.min.css")
+    // STYLES END
+  body(ng-app='app', ng-controller='MainController as main')
+    .header
+      .navbar.navbar-default(role='navigation')
+        .container-fluid
+          .navbar-header
+            //- button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+             
+
+            a.pull-left(href='/')
+              img.navbar-logo(src='/images/logo.svg')
+            a.pull-left(href='/') 
+              img.navbar-brand(src='/images/brand.svg')
+
+      
+  
+
+          .collapse.navbar-collapse
+            //- ul.nav.navbar-nav
+            //-   li(ng-class="{ active: isActive('/')}")
+            //-     a(href='/') Главная
+            ul.nav.navbar-nav
+              li(ng-class="{ active: isActive('/features')}")
+                a(href='/features') 
+                  | Что умеет?
+
+            ul.nav.navbar-nav
+              li(ng-class="{ active: isActive('/contacts')}")
+                a(href='/contacts') 
+                  | Контакты
+
+            ul.nav.navbar-nav
+              li(ng-class="{ active: isActive('/releases')}")
+                a(href='/releases') 
+                  | Купить
+                  
+            auth-toolbar
+  
+    div(ng-view='' autoscroll="true")
+  
+
+        //- .col-md-4
+    //- .container
+    //-   div(ng-view='')
+    //-   .footer
+    //-     .row
+    //-       //- .col-md-4
+    //-       //-   .pull-left
+    //-       //-     p
+    //-       //-       | PinMaker PRO
+    //-       //-       i.fa.fa-fw.fa-copyright
+    //-       //-       | 2017
+    //-       //- .col-md-4
+    //-       .text-center
+    //-         a(href='/instafilter-license.txt' target='_blank') Лицензионное соглашение
+    //-       //- .col-md-4
+
+
+    // bower:js
+    script(src='/bower_components/angular/angular.js')
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/angular-animate/angular-animate.js')
+    script(src='/bower_components/angular-messages/angular-messages.js')
+    script(src='/bower_components/angular-route/angular-route.js')
+    script(src='/bower_components/angular-sanitize/angular-sanitize.js')
+    script(src='/bower_components/angular-xeditable/dist/js/xeditable.min.js')
+    script(src='/bower_components/lodash/lodash.js')
+    script(src='/bower_components/angular-ui-notification/dist/angular-ui-notification.js')
+    script(src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.js')
+    script(src='/bower_components/angular-confirm-modal/angular-confirm.min.js')
+    script(src='/bower_components/angular-jwt/dist/angular-jwt.js')
+    script(src='/bower_components/ngstorage/ngStorage.js')
+    script(src='/bower_components/sails.io.js/dist/sails.io.js')
+    script(src='/bower_components/angular-sails/dist/angular-sails.js')
+    script(src='/bower_components/moment/moment.js')
+    script(src='/bower_components/angular-moment/angular-moment.js')
+    script(src='/bower_components/ng-file-upload/ng-file-upload.js')
+    script(src='/bower_components/angular-PubSub/src/angular-pubsub.js')
+    script(src='/bower_components/re-tree/re-tree.js')
+    script(src='/bower_components/ng-device-detector/ng-device-detector.js')
+    script(src='/bower_components/compare-versions/index.js')
+    // endbower
+
+    // SCRIPTS
+    script(src="/min/production.min.js")
+    // SCRIPTS END
+             
+    // Yandex.Metrika counter
+    script
+      | (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43537329 = new Ya.Metrika({ id:43537329, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    noscript
+      div
+        img(src='https://mc.yandex.ru/watch/43537329', style='position:absolute; left:-9999px;', alt='')
+ 

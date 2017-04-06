@@ -1,0 +1,25 @@
+.container
+  .row
+    h3 Uploaders Management
+          
+    table.table.table-bordered.table-hover.table-condensed.table-custom(ng-if='DataUploaderService.data.length' ng-cloak)
+      thead
+        tr
+          td Id
+          td Approved
+          td Date
+          td
+      tbody
+        tr(data-ng-repeat='uploader in DataUploaderService.data')
+          td {{ uploader.id }}
+          td {{ uploader.approved }}
+          td(am-time-ago="uploader.createdAt")
+          td(style="white-space: nowrap")
+            button.btn.btn-default.btn-sm(ng-click="openEditUploaderModal(uploader)")
+              | More
+    .jumbotron(ng-hide="DataUploaderService.data.length")
+      h5.text-gray No Uploaders Available
+
+    a.btn.btn-default(ng-click="openAddUploaderModal()") Add New Uploader
+
+    

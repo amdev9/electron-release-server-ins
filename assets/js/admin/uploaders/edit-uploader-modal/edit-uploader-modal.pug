@@ -1,0 +1,59 @@
+form(editable-form='', name='uploaderForm', onaftersave='acceptEdit()', e-role='form')
+  .modal-header
+    h3.modal-title {{ uploader.id }}
+  .modal-body
+    .form-horizontal
+      // Uploader Id
+      .form-group
+        label.col-md-4.control-label Uploader Id
+        .col-md-7 {{ uploader.id }}
+      // Select Approve status
+      .form-group
+        label.col-md-4.control-label(for='approved') Approve status
+        .col-md-7 
+        span(
+            editable-select="uploader.approved"
+            e-name="approved"
+            e-form="rowform"
+            e-ng-options="o as o for o in DataUploaderService.availableStatuses"
+            )
+            p.release-notes {{ uploader.approved }}
+            
+      // Memory
+      .form-group
+        label.col-md-4.control-label Memory
+        .col-md-7 {{ uploader.memory }}
+      // Username
+      .form-group
+        label.col-md-4.control-label Username
+        .col-md-7 {{ uploader.username }}
+      // Homedir
+      .form-group
+        label.col-md-4.control-label Homedir
+        .col-md-7 {{ uploader.homedir }}
+      // BIOSVersion
+      .form-group
+        label.col-md-4.control-label BIOSVersion
+        .col-md-7 {{ uploader.biosversion }}
+      // DiskEnum
+      .form-group
+        label.col-md-4.control-label DiskEnum
+        .col-md-7 {{ uploader.diskenum }}
+      // BIOSVendor
+      .form-group
+        label.col-md-4.control-label BIOSVendor
+        .col-md-7 {{ uploader.biosvendor }}
+      // SystemManufacturer
+      .form-group
+        label.col-md-4.control-label SystemManufacturer
+        .col-md-7 {{ uploader.systemmanufacturer }}
+   
+       
+  .modal-footer
+    div(ng-if='!uploaderForm.$visible')
+      button.btn.btn-warning(type='button', ng-click='uploaderForm.$show()') Edit
+      button.btn.btn-danger(type='button', ng-click='deleteUploader()', confirm='Are you sure that you want to delete this uploader?') Delete
+      button.btn.btn-default(type='button', ng-click='closeModal()') Close
+    div(ng-if='uploaderForm.$visible')
+      button.btn.btn-warning(type='submit', ng-disable='uploaderForm.$waiting') Accept Changes
+      button.btn.btn-danger(type='button', ng-click='uploaderForm.$cancel()') Cancel
