@@ -8,9 +8,7 @@
         <g id="icon_512x512">
             <g id="Group" transform="translate(11.000000, 10.000000)">
                 <ellipse id="Oval" stroke="#DB2B7A" fill="#DB2B7A" cx="245" cy="245" rx="245" ry="245"></ellipse>
-                <text id="If" font-family="Reckoner" font-size="400" font-style="condensed" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="168" y="385">If</tspan>
-                </text>
+                <path d="M196,385 L168,385 L168,105 L196,105 L196,385 Z M250,133 L250,217 L308.4,217 L308.4,245 L250,245 L250,385 L222,385 L222,217 L250,217 L222,133 L222,105 L322.8,105 L322.8,133 L250,133 Z" id="If" fill="#FFFFFF"></path>
             </g>
         </g>
     </g>
