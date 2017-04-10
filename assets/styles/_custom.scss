@@ -5,8 +5,14 @@
 
 .container .btn-warning {
     color: #fff;
-    background-color: rgb(219,43,122) !important;
-    border-color: rgb(219,43,122) !important;
+    background-color: rgb(219,43,122);
+    border-color: rgb(219,43,122);
+}
+
+.container .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open>.dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #00b3db;
+  border-color: #285e8e; /*set the color you want here*/
 }
 
 .download .btn {
