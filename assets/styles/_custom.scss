@@ -11,8 +11,8 @@
 
 .container .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open>.dropdown-toggle.btn-warning {
   color: #fff;
-  background-color: #00b3db;
-  border-color: #285e8e; /*set the color you want here*/
+  background-color: darken(rgb(219,43,122), 5%);
+  border-color: darken(rgb(219,43,122), 8%); //#285e8e; /*set the color you want here*/
 }
 
 .download .btn {
@@ -38,8 +38,8 @@
 .butt a {
   width: 170px;
   display: block;
-  margin-top: 40px !important;
-  margin-bottom: 60px !important;
+  margin-top: 50px !important;
+  margin-bottom: 80px !important;
 }
 
  
